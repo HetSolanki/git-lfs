@@ -7,14 +7,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
-  - name: Get IP Addresses
-    id: ip
-    uses: candidob/get-runner-ip@v1.0.0
+    - name: Get IP Addresses
+      id: ip
+      uses: candidob/get-runner-ip@v1.0.0
 
-  - name: See IP Addresses
-    run: |
-      echo "IPv4: ${{ steps.ip.outputs.ipv4 }}"
-      echo "IPv6: ${{ steps.ip.outputs.ipv6 }}"
+    - name: See IP Addresses
+      run: |
+        echo "IPv4: ${{ steps.ip.outputs.ipv4 }}"
+        echo "IPv6: ${{ steps.ip.outputs.ipv6 }}"
 
-  - run: ping google.com
+    - run: ping google.com
 
