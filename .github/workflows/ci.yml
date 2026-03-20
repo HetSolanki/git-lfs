@@ -1,8 +1,8 @@
 name: ci
 
 on:
-  push: 
-    - main
+  push:
+    branches: [main]
 
 jobs:
   test:
